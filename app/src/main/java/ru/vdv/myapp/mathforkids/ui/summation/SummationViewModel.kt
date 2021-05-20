@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class SummationViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Это фрагмент модуля \"Умножение\""
+        value = "Это фрагмент модуля \"Сложение\""
     }
     val text: LiveData<String> = _text
 }
