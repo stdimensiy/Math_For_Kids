@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="ru.vdv.myapp.mathforkids.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_multiplication"
+        android:name="ru.vdv.myapp.mathforkids.ui.multiplication.MultiplicationFragment"
+        android:label="@string/menu_multiplication"
+        tools:layout="@layout/fragment_multiplication" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="ru.vdv.myapp.mathforkids.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_summation"
+        android:name="ru.vdv.myapp.mathforkids.ui.summation.SummationFragment"
+        android:label="@string/menu_summation"
+        tools:layout="@layout/fragment_summation" />
 </navigation>

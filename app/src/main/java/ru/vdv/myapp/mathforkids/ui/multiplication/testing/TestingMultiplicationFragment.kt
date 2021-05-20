@@ -1,4 +1,4 @@
-package ru.vdv.myapp.mathforkids.ui.gallery
+package ru.vdv.myapp.mathforkids.ui.multiplication.testing
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import ru.vdv.myapp.mathforkids.R
-import ru.vdv.myapp.mathforkids.databinding.FragmentGalleryBinding
+import ru.vdv.myapp.mathforkids.databinding.TestingMultiplicationFragmentBinding
 
-class GalleryFragment : Fragment() {
-
-    private lateinit var galleryViewModel: GalleryViewModel
-    private var _binding: FragmentGalleryBinding? = null
+class TestingMultiplicationFragment : Fragment() {
+    private lateinit var testingMultiplicationViewModel: TestingMultiplicationViewModel
+    private var _binding: TestingMultiplicationFragmentBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,14 +23,14 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        testingMultiplicationViewModel =
+            ViewModelProvider(this).get(TestingMultiplicationViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = TestingMultiplicationFragmentBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textTestingMultiplication
+        testingMultiplicationViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
