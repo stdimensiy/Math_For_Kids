@@ -9,17 +9,66 @@
         android:id="@+id/nav_home"
         android:name="ru.vdv.myapp.mathforkids.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_multiplication"
+            app:destination="@id/nav_multiplication" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_summation"
+            app:destination="@id/nav_summation" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_multiplication"
         android:name="ru.vdv.myapp.mathforkids.ui.multiplication.MultiplicationFragment"
         android:label="@string/menu_multiplication"
-        tools:layout="@layout/fragment_multiplication" />
+        tools:layout="@layout/fragment_multiplication">
+        <action
+            android:id="@+id/action_nav_multiplication_to_testingMultiplicationFragment"
+            app:destination="@id/testingMultiplicationFragment" />
+        <action
+            android:id="@+id/action_nav_multiplication_to_trainingMultiplicationFragment"
+            app:destination="@id/trainingMultiplicationFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_summation"
         android:name="ru.vdv.myapp.mathforkids.ui.summation.SummationFragment"
         android:label="@string/menu_summation"
-        tools:layout="@layout/fragment_summation" />
+        tools:layout="@layout/fragment_summation">
+        <action
+            android:id="@+id/action_nav_summation_to_testingSummationFragment"
+            app:destination="@id/testingSummationFragment" />
+        <action
+            android:id="@+id/action_nav_summation_to_trainingSummationFragment"
+            app:destination="@id/trainingSummationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testingMultiplicationFragment"
+        android:name="ru.vdv.myapp.mathforkids.ui.multiplication.testing.TestingMultiplicationFragment"
+        android:label="@string/label_testing_multiplication"
+        tools:layout="@layout/testing_multiplication_fragment" />
+    <fragment
+        android:id="@+id/trainingMultiplicationFragment"
+        android:name="ru.vdv.myapp.mathforkids.ui.multiplication.training.TrainingMultiplicationFragment"
+        android:label="@string/label_training_multiplication"
+        tools:layout="@layout/training_multiplication_fragment">
+        <action
+            android:id="@+id/action_trainingMultiplicationFragment_to_testingMultiplicationFragment"
+            app:destination="@id/testingMultiplicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingSummationFragment"
+        android:name="ru.vdv.myapp.mathforkids.ui.summation.training.TrainingSummationFragment"
+        android:label="@string/label_training_summation"
+        tools:layout="@layout/training_summation_fragment">
+        <action
+            android:id="@+id/action_trainingSummationFragment_to_testingSummationFragment"
+            app:destination="@id/testingSummationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testingSummationFragment"
+        android:name="ru.vdv.myapp.mathforkids.ui.summation.testing.TestingSummationFragment"
+        android:label="@string/label_testing_summation"
+        tools:layout="@layout/testing_summation_fragment" />
 </navigation>

@@ -10,4 +10,10 @@
     <string name="menu_home">Главная страница</string>
     <string name="menu_multiplication">Умножение</string>
     <string name="menu_summation">Сложение</string>
+    <string name="label_testing_multiplication">Тренировка - умножения</string>
+    <string name="label_training_multiplication">Подготовка Умножение</string>
+    <string name="label_testing_summation">Тестирование знаний СЛОЖЕНИЕ</string>
+    <string name="label_training_summation">Подготовка - СЛОЖЕНИЕ</string>
+    <string name="text_button_training">Перейти к обучению</string>
+    <string name="text_button_testing">Перейти к упражнению</string>
 </resources>
