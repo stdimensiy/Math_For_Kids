@@ -1,4 +1,4 @@
-package ru.vdv.myapp.mathforkids.ui.gallery
+package ru.vdv.myapp.mathforkids.ui.summation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import ru.vdv.myapp.mathforkids.R
-import ru.vdv.myapp.mathforkids.databinding.FragmentGalleryBinding
+import ru.vdv.myapp.mathforkids.databinding.FragmentSummationBinding
 
-class GalleryFragment : Fragment() {
+class SummationFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
-    private var _binding: FragmentGalleryBinding? = null
+    private lateinit var summationViewModel: SummationViewModel
+    private var _binding: FragmentSummationBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,14 +24,14 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        summationViewModel =
+            ViewModelProvider(this).get(SummationViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentSummationBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textSummation
+        summationViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

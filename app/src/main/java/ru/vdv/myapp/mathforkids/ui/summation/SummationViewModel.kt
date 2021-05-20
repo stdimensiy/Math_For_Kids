@@ -1,13 +1,13 @@
-package ru.vdv.myapp.mathforkids.ui.gallery
+package ru.vdv.myapp.mathforkids.ui.summation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GalleryViewModel : ViewModel() {
+class SummationViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is gallery Fragment"
+        value = "Это фрагмент модуля \"Умножение\""
     }
     val text: LiveData<String> = _text
 }

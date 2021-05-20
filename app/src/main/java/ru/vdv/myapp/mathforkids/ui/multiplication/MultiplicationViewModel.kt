@@ -1,13 +1,13 @@
-package ru.vdv.myapp.mathforkids.ui.slideshow
+package ru.vdv.myapp.mathforkids.ui.multiplication
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class MultiplicationViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "Это фрагмент модуля \"сложение\""
     }
     val text: LiveData<String> = _text
 }
