@@ -16,4 +16,6 @@
     <string name="label_training_summation">Подготовка - СЛОЖЕНИЕ</string>
     <string name="text_button_training">Перейти к обучению</string>
     <string name="text_button_testing">Перейти к упражнению</string>
+    <string name="text_button_start_summation">Тренировать сложение</string>
+    <string name="text_button_start_multiplication">Тренировать умножение</string>
 </resources>

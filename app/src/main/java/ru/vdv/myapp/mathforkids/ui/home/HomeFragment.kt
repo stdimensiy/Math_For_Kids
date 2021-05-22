@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
 import ru.vdv.myapp.mathforkids.R
 import ru.vdv.myapp.mathforkids.databinding.FragmentHomeBinding
 
@@ -25,6 +26,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val navController = NavHostFragment.findNavController(this)
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
@@ -35,6 +37,9 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        //слушатели
+        binding.buttonStartMultiplication.setOnClickListener { navController.navigate(R.id.nav_multiplication) }
+        binding.buttonStartSummation.setOnClickListener { navController.navigate(R.id.nav_summation) }
         return root
     }
 
