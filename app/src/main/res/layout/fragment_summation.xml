@@ -5,6 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.summation.SummationFragment">
+    <Button
+        android:id="@+id/button_training"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_training"
+        app:layout_constraintBottom_toTopOf="@+id/button_testing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_testing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_testing"
+        app:layout_constraintBottom_toTopOf="@+id/text_summation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_training"/>
 
     <TextView
         android:id="@+id/text_summation"

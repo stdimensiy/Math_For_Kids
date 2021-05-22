@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
+import ru.vdv.myapp.mathforkids.R
 import ru.vdv.myapp.mathforkids.databinding.FragmentMultiplicationBinding
 
 class MultiplicationFragment : Fragment() {
@@ -24,6 +26,7 @@ class MultiplicationFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val navController = NavHostFragment.findNavController(this)
         multiplicationViewModel =
             ViewModelProvider(this).get(MultiplicationViewModel::class.java)
 
@@ -34,6 +37,9 @@ class MultiplicationFragment : Fragment() {
         multiplicationViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        //слушатели
+        binding.buttonTesting.setOnClickListener {navController.navigate(R.id.testingMultiplicationFragment)}
+        binding.buttonTraining.setOnClickListener {navController.navigate(R.id.trainingMultiplicationFragment)}
         return root
     }
 
