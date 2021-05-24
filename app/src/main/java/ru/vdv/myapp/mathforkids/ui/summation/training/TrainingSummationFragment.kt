@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
+import ru.vdv.myapp.mathforkids.R
 import ru.vdv.myapp.mathforkids.databinding.TrainingSummationFragmentBinding
 
 class TrainingSummationFragment : Fragment() {
@@ -23,6 +25,7 @@ class TrainingSummationFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val navController = NavHostFragment.findNavController(this)
         trainingSummationViewModel =
             ViewModelProvider(this).get(TrainingSummationViewModel::class.java)
 
@@ -33,6 +36,7 @@ class TrainingSummationFragment : Fragment() {
         trainingSummationViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        binding.buttonTesting.setOnClickListener { navController.navigate(R.id.testingSummationFragment) }
         return root
     }
 
