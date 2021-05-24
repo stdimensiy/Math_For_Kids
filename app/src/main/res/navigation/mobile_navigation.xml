@@ -71,4 +71,8 @@
         android:name="ru.vdv.myapp.mathforkids.ui.summation.testing.TestingSummationFragment"
         android:label="@string/label_testing_summation"
         tools:layout="@layout/testing_summation_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.vdv.myapp.mathforkids.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
